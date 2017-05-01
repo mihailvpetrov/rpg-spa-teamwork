@@ -4,7 +4,7 @@ var $ = require('jQuery');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-    res.send('heroselect')
+    res.send('character')
 });
 
 module.exports = router;

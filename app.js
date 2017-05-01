@@ -1,15 +1,16 @@
-var express = require('express')
+var express = require('express');
+var low = require('lowdb');
 var port = 3000;
 
-var login = require('./routes/login');
-var heroselect = require('./routes/heroselect');
+var user = require('./routes/user');
+var character = require('./routes/character');
 var game = require('./routes/game');
 
-var app = express();
-var db = low('database/database.json');
+var app = express(),
+  db = low('./database/database.json');
 
-app.use('/', login);
-app.use('/heroselect', heroselect);
+app.use('/', user);
+app.use('/character', character);
 app.use('/game', game);
 
 app.listen(port, function () {
