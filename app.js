@@ -5,7 +5,8 @@ var login = require('./routes/login');
 var heroselect = require('./routes/heroselect');
 var game = require('./routes/game');
 
-var app = express()
+var app = express();
+var db = low('database/database.json');
 
 app.use('/', login);
 app.use('/heroselect', heroselect);
