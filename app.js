@@ -1,6 +1,6 @@
 var express = require('express');
 var low = require('lowdb');
-var port = 3000;
+var port = process.env.PORT || 8080;
 
 var user = require('./routes/user');
 var character = require('./routes/character');
