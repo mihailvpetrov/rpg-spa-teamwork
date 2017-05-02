@@ -7,4 +7,12 @@ router.get('/', function (req, res, next) {
     res.send('user');
 });
 
+router.get('/signup', function (req, res, next) {
+    res.send('user');
+});
+
+router.post('/sugnin', function (req, res, next) {
+    res.send('user');
+});
+
 module.exports = router;
