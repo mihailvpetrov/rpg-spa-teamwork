@@ -32,7 +32,7 @@ describe("Test heroes", function () {
     });
 
     describe("Mage", function () {
-        var testhero = new Rogue("Testus", "male", "1", "0");
+        var testhero = new Mage("Testus", "male", "1", "0");
         it("Hero created", function () {
             return typeof (testhero) === 'object';
         });
