@@ -11,10 +11,12 @@ router.get('/signup', function (req, res, next) {
     res.send('user');
 });
 
-router.get('/sugnin', function (req, res, next) {
-    $("#content").load("../pages/signin.html", function () {
-        alert("Load was performed.");
-    });
+router.get('/signin', function (req, res, next) {
+    $("#content").load("../views/signin.html");
+});
+
+router.get('*', function (req, res) {
+    res.sendfile('./index.html'); // load our public/index.html file
 });
 
 module.exports = router;
