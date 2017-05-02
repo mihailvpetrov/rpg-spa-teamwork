@@ -11,8 +11,10 @@ router.get('/signup', function (req, res, next) {
     res.send('user');
 });
 
-router.post('/sugnin', function (req, res, next) {
-    res.send('user');
+router.get('/sugnin', function (req, res, next) {
+    $("#content").load("ajax/test.html", function () {
+        alert("Load was performed.");
+    });
 });
 
 module.exports = router;
