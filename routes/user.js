@@ -12,7 +12,7 @@ router.get('/signup', function (req, res, next) {
 });
 
 router.get('/sugnin', function (req, res, next) {
-    $("#content").load("ajax/test.html", function () {
+    $("#content").load("../pages/signin.html", function () {
         alert("Load was performed.");
     });
 });
