@@ -1,20 +1,37 @@
 class Router {
     constructor() {
-        this.currentUrlHash;
-        this.matchUrlHash;
-        this.parameters = {};
+        this._routes = [];
     }
 
-    match(currentUrlHash, matchUrlHash, callback) {
+    on(matchUrl, callback) {
+        this._routes.push({
+            matchUrl,
+            callback
+        })
+        return this;
+    }
+
+    navigate() {
+        const currentUrlHash = location.hash.slice(1);
+        for (const {
+                matchUrl,
+                callback
+            } of this._routes) {
+            const parameters = Router.match(currentUrlHash, matchUrl);
+            if (parameters) {
+                callback(parameters);
+                break;
+            }
+        }
+    }
+
+    static match(currentUrlHash, matchUrlHash) {
         var currentParameters = currentUrlHash.split(/\//g).clean();
         var matchParameters = matchUrlHash.split(/\//g).clean();
-        console.log(currentParameters);
-        console.log(matchParameters);
         if (currentParameters.length !== matchParameters.length) {
-            console.log("diff length");
             return false;
         }
-
+        const parameters = {};
         const parametersCount = currentParameters.length;
         for (let i = 0; i < parametersCount; i++) {
             let firstSymbol = matchParameters[i][0];
@@ -27,8 +44,13 @@ class Router {
                 }
             }
         }
-        //return function (parameters) {};
-        callback();
+
+        return parameters;
+    }
+
+    start() {
+        $(document).ready(() => this.navigate());
+        $(window).on("hashchange", () => this.navigate());
     }
 }
 
@@ -43,18 +65,34 @@ Array.prototype.clean = function () {
 };
 
 function startRouter() {
-    console.log("Started router!");
-    $(window).on("hashchange", function (event) {
-        var router = new Router();
-        const postHashParameters = location.hash.slice(1);
-        //console.log(postHashParameters);
+    // router init
+    const router = new Router();
 
-        router.match(postHashParameters, "/home", function (parameters) {
-            $("#content").load("../views/signin.html");
-            console.log("works1");
-        });
+    // router setup
+    router.on("/", function () {
+        $("#content").load("../views/home.html");
+    })
+    router.on("/home", function () {
+        $("#content").load("../views/home.html");
+    })
+    router.on("/signin", function () {
+        $("#content").load("../views/signin.html");
+    })
+    router.on("/signup", function () {
+        $("#content").load("../views/signup.html");
+    })
+    router.on("/character", function () {
+        $("#content").load("../views/character.html");
+    })
+    router.on("/game", function () {
+        $("#content").load("../views/game.html");
+    })
+    router.on("/test/:username", function (parameters) { // parameters test
+        $("#content").html(parameters.username);
+    })
 
-    });
+    // router start
+    router.start();
 }
 
 export {

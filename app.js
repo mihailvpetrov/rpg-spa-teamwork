@@ -17,7 +17,6 @@ var game = require('./routes/game');
 app.use(bodyParser.json());
 app.use(express.static('public'));
 app.use(express.static(__dirname + '/public'));
-app.use('/bower_components', express.static(__dirname + '/bower_components'));
 app.use('/node_modules', express.static(__dirname + '/node_modules'));
 app.use('/', user);
 app.use('/character', character);

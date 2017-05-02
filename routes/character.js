@@ -3,7 +3,7 @@ var router = express.Router();
 var $ = require('jquery');
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
+router.get('/api/character', function (req, res, next) {
     res.send('character');
 });
 
