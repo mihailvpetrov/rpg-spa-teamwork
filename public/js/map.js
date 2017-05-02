@@ -1,7 +1,7 @@
 class Map {
-    constructor(name, data, entryPoint){
+    constructor(name, ...layout, entryPoint){
         this.name = name;
-        this.data = data; // contains the tiles data[x][y]
+        this.layout = layout; // contains the tiles layout[x][y]
         this.entryPoint = entryPoint; // character spawn location
     }
 }

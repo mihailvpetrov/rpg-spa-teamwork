@@ -5,14 +5,12 @@
     <title>Shinigami RPG</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link href="../css/main.css" rel="stylesheet">
+    <link href="./css/main.css" rel="stylesheet">
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="./node_modules/systemjs/dist/system.js"></script>
-    <script src="./system-config.js"></script>
-    <script>
-        // System.import('main');
-    </script>
+    <script src="node_modules/systemjs/dist/system.js"></script>
+    <script src="/js/system-config.js"></script>
+    <!--<script src="./js/system-config.js"></script>-->
 </head>
 
 <body>
@@ -20,6 +18,10 @@
     <script>
         var bootstrap_enabled = (typeof $().modal == 'function');
         $("#content").text("Bootstrap is enabled: " + bootstrap_enabled);
+        console.log("????");
+    </script>
+    <script>
+        SystemJS.import('core');
     </script>
 </body>
 
