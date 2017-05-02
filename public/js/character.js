@@ -1,8 +1,8 @@
 class Character {
     constructor(name, gender, level, experience, positionX, positionY) {
         this.name = name;
-        this.level = level;
-        this.experience = experience;
+        this.level = level * 1;
+        this.experience = experience * 1;
         this.positionX = positionX;
         this.positionY = positionY;
         this.gender = gender;
