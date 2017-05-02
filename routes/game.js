@@ -4,7 +4,7 @@ var $ = require('jquery');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-    res.send('game')
+    res.send('game');
 });
 
 module.exports = router;
