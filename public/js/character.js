@@ -1,11 +1,8 @@
 class Character {
-    constructor(heroName, heroClass, heroLevel, gender, positionX = 0, positionY = 0) {
-        this.name = heroName;
-        this.class = heroClass;
-        this.level = heroLevel;
-        this.health = (this.level * 10) + 50;
-        this.mana = (this.level * 5) + 30;
-        this.experience = 0;
+    constructor(name, level, gender, experience, positionX = 0, positionY = 0) {
+        this.name = name;
+        this.level = level;
+        this.experience = experience;
         this.positionX = positionX;
         this.positionY = positionY;
         this.gender = gender;
@@ -35,12 +32,12 @@ class Character {
 }
 
 class Soldier extends Character {
-    constructor(heroName, gender, heroLevel, positionX = 0, positionY = 0) {
-        this.name = heroName;
+    constructor(name, gender, level, experience, positionX = 0, positionY = 0) {
+        this.name = name;
         this.class = "Soldier";
         this.gender = gender;
-        this.level = heroLevel;
-        this.experience = 0;
+        this.level = level;
+        this.experience = experience;
         this.positionX = positionX;
         this.positionY = positionY;
         this.moveSpeed = 1; // turns per round
@@ -52,12 +49,12 @@ class Soldier extends Character {
 }
 
 class Mage extends Character {
-    constructor(heroName, gender, heroLevel, positionX = 0, positionY = 0) {
-        this.name = heroName;
+    constructor(name, gender, level, experience, positionX = 0, positionY = 0) {
+        this.name = name;
         this.class = "Mage";
         this.gender = gender;
-        this.level = heroLevel;
-        this.experience = 0;
+        this.level = level;
+        this.experience = experience;
         this.positionX = positionX;
         this.positionY = positionY;
         this.moveSpeed = 1; // turns per round
@@ -69,12 +66,12 @@ class Mage extends Character {
 }
 
 class Rogue extends Character {
-    constructor(heroName, gender, heroLevel, positionX = 0, positionY = 0) {
-        this.name = heroName;
+    constructor(name, gender, level, experience, positionX = 0, positionY = 0) {
+        this.name = name;
         this.class = "Rogue";
         this.gender = gender;
-        this.level = heroLevel;
-        this.experience = 0;
+        this.level = level;
+        this.experience = experience;
         this.positionX = positionX;
         this.positionY = positionY;
         this.moveSpeed = 1; // turns per round
