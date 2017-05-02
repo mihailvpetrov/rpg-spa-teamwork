@@ -3,9 +3,6 @@
   "version": "0.0.1",
   "description": "RPG SPA app",
   "main": "app.js",
-  "scripts": {
-    "test": "test"
-  },
   "author": "Hristo & Mihail",
   "license": "ISC",
   "repository": "https://github.com/Xpload/rpg-spa-teamwork.git",
@@ -18,6 +15,7 @@
     "lowdb": "^0.16.2"
   },
   "scripts": {
+    "test": "test",
     "postinstall": "./node_modules/bower/bin/bower install"
   }
 }
