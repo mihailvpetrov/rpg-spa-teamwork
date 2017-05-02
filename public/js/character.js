@@ -34,13 +34,7 @@ class Character {
 class Soldier extends Character {
     constructor(name, gender, level, experience, positionX, positionY) {
         super(name, gender, level, experience, positionX, positionY);
-        this.name = name;
         this.class = "Soldier";
-        this.gender = gender;
-        this.level = level * 1;
-        this.experience = experience * 1;
-        this.positionX = positionX;
-        this.positionY = positionY;
         this.moveSpeed = 1; // turns per round
         this.attackSpeed = 1; // attacks per round
         this.attackRange = 1; // how much boxes away to hit
@@ -52,13 +46,7 @@ class Soldier extends Character {
 class Mage extends Character {
     constructor(name, gender, level, experience, positionX, positionY) {
         super(name, gender, level, experience, positionX, positionY);
-        this.name = name;
         this.class = "Mage";
-        this.gender = gender;
-        this.level = level * 1;
-        this.experience = experience * 1;
-        this.positionX = positionX;
-        this.positionY = positionY;
         this.moveSpeed = 1; // turns per round
         this.attackSpeed = 1; // attacks per round
         this.attackRange = 2; // how much boxes away to hit
@@ -70,13 +58,7 @@ class Mage extends Character {
 class Rogue extends Character {
     constructor(name, gender, level, experience, positionX, positionY) {
         super(name, gender, level, experience, positionX, positionY);
-        this.name = name;
         this.class = "Rogue";
-        this.gender = gender;
-        this.level = level * 1;
-        this.experience = experience * 1;
-        this.positionX = positionX;
-        this.positionY = positionY;
         this.moveSpeed = 1; // turns per round
         this.attackSpeed = 2; // attacks per round
         this.attackRange = 1; // how much boxes away to hit
@@ -85,8 +67,4 @@ class Rogue extends Character {
     }
 }
 
-
-
-module.exports = Soldier;
-module.exports = Mage;
-module.exports = Rogue;
+module.exports = Soldier, Mage, Rogue;

@@ -21,6 +21,6 @@
     "start": "node app.js",
     "monitor": "nodemon app.js",
     "test": "./node_modules/.bin/mocha --reporter spec tests -u bdd",
-    "postinstall": "./node_modules/bower/bin/bower install"
+    "postinstall": "bower install"
   }
 }

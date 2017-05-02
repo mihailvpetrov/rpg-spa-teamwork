@@ -16,7 +16,7 @@ router.get('/signin', function (req, res, next) {
 });
 
 router.get('*', function (req, res) {
-    res.sendfile('./index.html'); // load our public/index.html file
+    res.sendFile('./index.html'); // load our public/index.html file
 });
 
 module.exports = router;
