@@ -44,4 +44,23 @@ bower install
 
 
 
+Node.js components used:
+
+
+
+ * lowdb - lightweight database
+
+ * jquery
+
+ * bower - to manage libraries (jquery and bootstrap)
+
+ * express - to create the actual SPA application
+
+ * bootstrap
+
+ * body-parser
+
+
+
+
 The project is on Heroku: https://shinigami-rpg.herokuapp.com/

@@ -2,16 +2,20 @@
 <html lang="en">
 
 <head>
-    <title></title>
+    <title>Shinigami RPG</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/main.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="../css/main.css" rel="stylesheet">
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 </head>
 
 <body>
-    <div id="content"></div>
+    <div id="content" class="container-fluid"></div>
+    <script>
+        var bootstrap_enabled = (typeof $().modal == 'function');
+        $("#content").text("Bootstrap is enabled: " + bootstrap_enabled);
+    </script>
 </body>
 
 </html>
