@@ -1,5 +1,5 @@
 class Character {
-    constructor(name, level, gender, experience, positionX = 0, positionY = 0) {
+    constructor(name, gender, level, experience, positionX, positionY) {
         this.name = name;
         this.level = level;
         this.experience = experience;
@@ -21,18 +21,19 @@ class Character {
         }
     }
 
-    setPosition(x, y){
+    setPosition(x, y) {
         this.positionX = x;
         this.positionY = y;
     }
 
-    levelUp(amount){
+    levelUp(amount) {
         this.level += amount;
     }
 }
 
 class Soldier extends Character {
-    constructor(name, gender, level, experience, positionX = 0, positionY = 0) {
+    constructor(name, gender, level, experience, positionX, positionY) {
+        super(name, gender, level, experience, positionX, positionY);
         this.name = name;
         this.class = "Soldier";
         this.gender = gender;
@@ -49,7 +50,8 @@ class Soldier extends Character {
 }
 
 class Mage extends Character {
-    constructor(name, gender, level, experience, positionX = 0, positionY = 0) {
+    constructor(name, gender, level, experience, positionX, positionY) {
+        super(name, gender, level, experience, positionX, positionY);
         this.name = name;
         this.class = "Mage";
         this.gender = gender;
@@ -66,7 +68,8 @@ class Mage extends Character {
 }
 
 class Rogue extends Character {
-    constructor(name, gender, level, experience, positionX = 0, positionY = 0) {
+    constructor(name, gender, level, experience, positionX, positionY) {
+        super(name, gender, level, experience, positionX, positionY);
         this.name = name;
         this.class = "Rogue";
         this.gender = gender;
@@ -81,3 +84,5 @@ class Rogue extends Character {
         this.mana = (this.level * 6) + 28;
     }
 }
+
+module.exports = Character;
