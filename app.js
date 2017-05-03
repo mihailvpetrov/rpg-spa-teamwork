@@ -3,7 +3,7 @@
 var express = require('express');
 var low = require('lowdb');
 var bodyParser = require('body-parser');
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 8081;
 
 var app = express();
 var db = low('./database/database.json');
@@ -17,7 +17,7 @@ var game = require('./routes/game');
 app.use(bodyParser.json());
 app.use(express.static('public'));
 app.use(express.static(__dirname + '/public'));
-app.use('/node_modules', express.static(__dirname + '/node_modules'));
+app.use('/lib', express.static(__dirname + '/node_modules'));
 app.use('/', user);
 app.use('/character', character);
 app.use('/game', game);

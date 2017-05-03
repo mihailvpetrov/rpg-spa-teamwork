@@ -1,5 +1,4 @@
-// var startRouter = require("./router");
-import {startRouter} from './router.js';
+import {startRouter} from 'router';
 console.log("core.js");
 
 startRouter();

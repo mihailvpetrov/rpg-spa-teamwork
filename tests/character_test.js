@@ -1,7 +1,7 @@
 var expect = require("chai").expect;
-var Soldier = require("../public/js/character");
-var Mage = require("../public/js/character");
-var Rogue = require("../public/js/character");
+var Soldier = require("../public/js/controller/character");
+var Mage = require("../public/js/controller/character");
+var Rogue = require("../public/js/controller/character");
 
 describe("Test heroes", function () {
     describe("Soldier", function () {
