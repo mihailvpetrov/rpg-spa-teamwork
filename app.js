@@ -13,7 +13,6 @@ var character = require('./routes/character');
 var game = require('./routes/game');
 
 // CONFIGURATION
-// test
 
 app.use(bodyParser.json());
 app.use(express.static('public'));
