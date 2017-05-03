@@ -69,27 +69,20 @@ function startRouter() {
     const router = new Router();
 
     // router setup
-    router.on("/", function () {
-        $("#content").load("../views/home.html");
-    })
-    router.on("/home", function () {
-        $("#content").load("../views/home.html");
-    })
-    router.on("/signin", function () {
-        $("#content").load("../views/signin.html");
-    })
-    router.on("/signup", function () {
-        $("#content").load("../views/signup.html");
-    })
-    router.on("/character", function () {
-        $("#content").load("../views/character.html");
-    })
-    router.on("/game", function () {
-        $("#content").load("../views/game.html");
-    })
-    router.on("/test/:username", function (parameters) { // parameters test
-        $("#content").html(parameters.username);
-    })
+    router
+        .on("/", () => $("#content").load("../views/home.html"))
+        .on("/home", () =>
+            $("#content").load("../views/home.html"))
+        .on("/signin", () =>
+            $("#content").load("../views/signin.html"))
+        .on("/signup", () =>
+            $("#content").load("../views/signup.html"))
+        .on("/character", () =>
+            $("#content").load("../views/character.html"))
+        .on("/game", () =>
+            $("#content").load("../views/game.html"))
+        .on("/test/:username", (parameters) => // parameters test
+            $("#content").html(parameters.username))
 
     // router start
     router.start();

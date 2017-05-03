@@ -18,9 +18,10 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 app.use(express.static(__dirname + '/public'));
 app.use('/lib', express.static(__dirname + '/node_modules'));
-app.use('/', user);
-app.use('/character', character);
-app.use('/game', game);
+app.use('/api/user', user);
+app.use('/api/character', character);
+app.use('/api/game', game);
+app.use('/api/maps', game);
 
 // START
 
