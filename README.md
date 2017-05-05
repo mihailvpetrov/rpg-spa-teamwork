@@ -2,7 +2,7 @@
 
 
 
-Shinigami RPG is a simpe Node.js SPA application in which
+Shinigami RPG is a simple Node.js SPA application in which
 
 
 
