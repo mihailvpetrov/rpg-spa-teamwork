@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 var port = process.env.PORT || 8081;
 
 var app = express();
-var db = low('./database/database.json');
+var database = low('./database/database.json');
 
 var user = require('./routes/user');
 var character = require('./routes/character');

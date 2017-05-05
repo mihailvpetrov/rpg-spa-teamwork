@@ -1,10 +1,10 @@
 class Router {
     constructor() {
-        this._routes = [];
+        this.routes = [];
     }
 
     on(matchUrl, callback) {
-        this._routes.push({
+        this.routes.push({
             matchUrl,
             callback
         })
@@ -16,7 +16,7 @@ class Router {
         for (const {
                 matchUrl,
                 callback
-            } of this._routes) {
+            } of this.routes) {
             const parameters = Router.match(currentUrlHash, matchUrl);
             if (parameters) {
                 callback(parameters);
@@ -65,29 +65,9 @@ Array.prototype.clean = function () {
 };
 
 function startRouter() {
-    // router init
-    const router = new Router();
 
-    // router setup
-    router
-        .on("/", () => $("#content").load("../views/home.html"))
-        .on("/home", () =>
-            $("#content").load("../views/home.html"))
-        .on("/signin", () =>
-            $("#content").load("../views/signin.html"))
-        .on("/signup", () =>
-            $("#content").load("../views/signup.html"))
-        .on("/character", () =>
-            $("#content").load("../views/character.html"))
-        .on("/game", () =>
-            $("#content").load("../views/game.html"))
-        .on("/test/:username", (parameters) => // parameters test
-            $("#content").html(parameters.username))
-
-    // router start
-    router.start();
 }
 
 export {
-    startRouter
+    Router
 };

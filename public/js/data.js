@@ -21,3 +21,11 @@ function getCharacters() {
 function postCharacters() {
     return requester.post("api/characters");
 }
+
+function postCharacters() {
+    return requester.post("api/characters");
+}
+
+function getMap(mapName) {
+    return requester.get("api/maps", mapName);
+}

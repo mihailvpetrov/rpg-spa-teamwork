@@ -9,8 +9,8 @@ function request(url, type, options, headers) {
     }));
 }
 
-function get(url) {
-    return request(url, "GET", {}, {});
+function get(url, options) {
+    return request(url, "GET", options, {});
 }
 
 function post(url) {

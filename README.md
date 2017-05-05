@@ -52,8 +52,6 @@ Node.js components used:
 
  * jquery
 
- * bower - to manage libraries (jquery and bootstrap)
-
  * express - to create the actual SPA application
 
  * bootstrap

@@ -1,0 +1,5 @@
+function gameController(){
+
+}
+
+export {gameController}

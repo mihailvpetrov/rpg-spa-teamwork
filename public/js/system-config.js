@@ -7,6 +7,9 @@ System.config({
         'core': '../js/core.js',
         'router': '../js/router.js',
         'requester': '../js/requester.js',
-        'data': '../js/data.js'
+        'data': '../js/data.js',
+        'homeController': '../js/controllers/homeController.js',
+        'characterController': '../js/controllers/characterController.js',
+        'gameController': '../js/controllers/gameController.js',
     }
 });

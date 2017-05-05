@@ -1,0 +1,5 @@
+function characterController(){
+
+}
+
+export {characterController}
